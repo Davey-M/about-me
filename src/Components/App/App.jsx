@@ -13,7 +13,7 @@ function App() {
             <Link to='/'>Home</Link>
             <Link to='/about'>About</Link>
             <Link to='/contact'>Contact</Link>
-            <Link to='/snake'>Snake</Link>
+            <Link to='/games'>Games</Link>
           </nav>
         </header>
         <section>
@@ -22,7 +22,7 @@ function App() {
             <Route path='/about' element={<h1>About Page</h1>} />
             <Route path='/contact' element={<h1>Contact Page</h1>} />
             {/* snake is a snake game to play */}
-            <Route path='/snake' element={<h1>Snake Page</h1>} />
+            <Route path='/games' element={<h1>Snake Page</h1>} />
           </Routes>
         </section>
       </>

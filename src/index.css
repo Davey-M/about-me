@@ -36,6 +36,6 @@ h1.large {
   border-radius: var(--small);
 }
 
-.card.shadow {
+.shadow {
   box-shadow: var(--shadow);
 }
