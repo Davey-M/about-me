@@ -7,7 +7,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --black: #333;
+  --white: #fff;
+
+  --no-gap: 0px;
+  --small-gap: 5px;
+  --mid-gap: 10px;
+  --large-gap: 20px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: var(--small-gap) var(--no-gap);
 }
