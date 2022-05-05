@@ -29,7 +29,7 @@ function BackgroundCode({ githubFilePath }) {
 
         interval = setInterval(() => {
           setIndex((index) => index + 1);
-        }, 100);
+        }, 80);
       })
       .catch((err) => {
         console.error('Error in BackgroundCode', err);
@@ -43,9 +43,9 @@ function BackgroundCode({ githubFilePath }) {
       <div className={styles.background}>
         <SyntaxHighlighter language='javascript' showLineNumbers={false}>
           {code.substring(0, index)}
-          <span className={styles.cursor}></span>
         </SyntaxHighlighter>
       </div>
+      <div className={styles.background}></div>
     </>
   );
 }
