@@ -1,8 +1,13 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { materialLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
+
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
+import jsx from 'react-syntax-highlighter/dist/esm/languages/prism/jsx';
+import { oneLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
+
 import styles from './BackgroundCode.module.css';
+
+SyntaxHighlighter.registerLanguage('jsx', jsx);
 
 function BackgroundCode({ githubFilePath }) {
   const [index, setIndex] = useState(0);
@@ -44,8 +49,8 @@ function BackgroundCode({ githubFilePath }) {
       <div className={styles.background}>
         <SyntaxHighlighter
           language='jsx'
-          style={materialLight}
-          showLineNumbers={false}
+          style={oneLight}
+          showLineNumbers={true}
         >
           {code.substring(0, index)}
           {/* {code} */}
