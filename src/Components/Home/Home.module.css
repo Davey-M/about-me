@@ -18,3 +18,8 @@
   display: grid;
   align-items: center;
 }
+
+.paragraph {
+  margin-top: var(--large);
+  border-top: var(--line) solid var(--black);
+}

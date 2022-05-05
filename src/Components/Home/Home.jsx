@@ -14,9 +14,9 @@ function Home() {
           <div className={styles.centerCard + ' card shadow'}>
             <h1 className='large'>David Meuer</h1>
             <h1 className='light'>Web Developer</h1>
-          </div>
-          <div>
-            <p>Opening paragraph / Intro about me</p>
+            <div className={styles.paragraph}>
+              <p>Opening paragraph / Intro about me</p>
+            </div>
           </div>
         </div>
       </div>

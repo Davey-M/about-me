@@ -10,14 +10,9 @@ import styles from './BackgroundCode.module.css';
 SyntaxHighlighter.registerLanguage('jsx', jsx);
 
 function BackgroundCode({ githubFilePath }) {
-  const [index, setIndex] = useState(0);
   const [code, setCode] = useState('');
 
-  const keywords = ['let', 'const', 'function', 'return'];
-
   useEffect(() => {
-    let interval;
-
     axios
       .get(
         'https://api.github.com/repositories/488663277/contents/' +
@@ -30,18 +25,11 @@ function BackgroundCode({ githubFilePath }) {
       )
       .then((response) => {
         // console.log(response.data);
-        clearInterval(interval);
         setCode(response.data);
-
-        interval = setInterval(() => {
-          setIndex((index) => index + 1);
-        }, 80);
       })
       .catch((err) => {
         console.error('Error in BackgroundCode', err);
       });
-
-    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -52,11 +40,9 @@ function BackgroundCode({ githubFilePath }) {
           style={oneLight}
           showLineNumbers={true}
         >
-          {code.substring(0, index)}
-          {/* {code} */}
+          {code}
         </SyntaxHighlighter>
       </div>
-      {/* <div className={styles.background}></div> */}
     </>
   );
 }
