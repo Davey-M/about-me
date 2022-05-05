@@ -12,6 +12,10 @@
   color: var(--light);
 
   z-index: -10;
+
+  overflow: hidden;
+
+  padding: var(--mid);
 }
 
 .background pre {
@@ -20,6 +24,7 @@
   font-family: monospace !important;
   padding: var(--no) !important;
   margin: var(--no) !important;
+  overflow: hidden !important;
 }
 
 .code {
