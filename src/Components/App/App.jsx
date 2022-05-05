@@ -18,7 +18,6 @@ function App() {
           </nav>
         </header>
         <section className={styles.main}>
-          <BackgroundCode />
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<h1>About Page</h1>} />
