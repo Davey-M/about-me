@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import styles from './BackgroundCode.module.css';
 
-function BackgroundCode({ githubFile }) {
+function BackgroundCode({ githubFilePath }) {
   const [index, setIndex] = useState(0);
   const [code, setCode] = useState('');
 
@@ -13,13 +13,18 @@ function BackgroundCode({ githubFile }) {
     let interval;
 
     axios
-      .get(githubFile, {
-        headers: {
-          Accept: 'application/vnd.github.VERSION.raw',
+      .get(
+        'https://api.github.com/repositories/488663277/contents/' +
+          githubFilePath,
+        {
+          headers: {
+            Accept: 'application/vnd.github.VERSION.raw',
+          },
         },
-      })
+      )
       .then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
+        clearInterval(interval);
         setCode(response.data);
 
         interval = setInterval(() => {
@@ -38,6 +43,7 @@ function BackgroundCode({ githubFile }) {
       <div className={styles.background}>
         <SyntaxHighlighter language='javascript' showLineNumbers={false}>
           {code.substring(0, index)}
+          <span className={styles.cursor}></span>
         </SyntaxHighlighter>
       </div>
     </>

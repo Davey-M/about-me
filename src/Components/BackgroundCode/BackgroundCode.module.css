@@ -35,3 +35,12 @@
 .variable {
   color: rgb(123, 105, 255);
 }
+
+.cursor {
+  display: inline-block;
+
+  background-color: var(--black);
+
+  width: 2px;
+  height: 1em;
+}
