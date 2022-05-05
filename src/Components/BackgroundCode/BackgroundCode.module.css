@@ -1,12 +1,17 @@
 .background {
-  width: calc(100% - (var(--mid) * 2));
-  height: calc(100% - (var(--mid) * 2));
+  /* width: calc(100% - (var(--mid) * 2));
+  height: calc(100% - (var(--mid) * 2)); */
+
+  width: 100%;
+  height: 100%;
 
   position: absolute;
   top: 0;
   left: 0;
+
+  display: grid;
   
-  background-color: var(--transparent-white);
+  /* background-color: var(--transparent-white); */
 
   /* color: var(--white); */
   color: var(--light);
@@ -15,16 +20,17 @@
 
   overflow: hidden;
 
-  padding: var(--mid);
+  /* padding: var(--mid); */
 }
 
 .background pre {
-  background-color: transparent !important;
-  text-shadow: none !important;
+  /* background-color: transparent !important; */
+  /* text-shadow: none !important;
   font-family: monospace !important;
   padding: var(--no) !important;
   margin: var(--no) !important;
-  overflow: hidden !important;
+  overflow: hidden !important; */
+  height: 100%;
 }
 
 .code {

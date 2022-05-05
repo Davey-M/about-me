@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { materialLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import styles from './BackgroundCode.module.css';
 
 function BackgroundCode({ githubFilePath }) {
@@ -41,11 +42,16 @@ function BackgroundCode({ githubFilePath }) {
   return (
     <>
       <div className={styles.background}>
-        <SyntaxHighlighter language='jsx' showLineNumbers={false}>
+        <SyntaxHighlighter
+          language='jsx'
+          style={materialLight}
+          showLineNumbers={false}
+        >
           {code.substring(0, index)}
+          {/* {code} */}
         </SyntaxHighlighter>
       </div>
-      <div className={styles.background}></div>
+      {/* <div className={styles.background}></div> */}
     </>
   );
 }
