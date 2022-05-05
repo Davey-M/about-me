@@ -41,7 +41,7 @@ function BackgroundCode({ githubFilePath }) {
   return (
     <>
       <div className={styles.background}>
-        <SyntaxHighlighter language='javascript' showLineNumbers={false}>
+        <SyntaxHighlighter language='jsx' showLineNumbers={false}>
           {code.substring(0, index)}
         </SyntaxHighlighter>
       </div>
