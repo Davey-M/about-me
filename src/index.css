@@ -10,6 +10,9 @@ body {
   --black: #333;
   --transparent-black: #00000034;
   --white: #fff;
+  --light: #cdcdcd;
+
+  --dark: #33343a;
 
   --no: 0px;
   --small: 5px;
@@ -34,6 +37,8 @@ h1.large {
 .card {
   padding: var(--mid);
   border-radius: var(--small);
+
+  background-color: var(--white);
 }
 
 .shadow {
