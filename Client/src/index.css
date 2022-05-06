@@ -24,6 +24,11 @@ body {
   --shadow: 0px 5px 5px var(--transparent-black);
 }
 
+.grid {
+  display: grid;
+  min-height: 100%;
+}
+
 h1, h2, h3, h4, h5, h6, p {
   margin: var(--small) var(--no);
 }
